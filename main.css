@@ -4,6 +4,11 @@
     width: 90%;
     display: flex;
     flex-direction: row;
+    margin-top: 5px;
+}
+.main_box{
+    display: flex;
+    flex-direction:row;
 }
 .outer_box{
     border:2px;
@@ -31,10 +36,11 @@
 }
 .price_box{
     position: relative;
-    left: 80%;
+    margin-left: 50px;
     border:2px;
     border-style: solid;
-    width: 10%;
+    width: 30%;
+    height: 400px;
 }
 .productImg{
     width: 80px;
@@ -82,8 +88,38 @@
     margin-top: 10px;
     cursor: pointer;
     color: white;
+    margin-bottom: 10px;
     background-color: rgb(224, 95, 48);
 }
-.productBox{
-    
+.priceTable{
+    width: 100%;
+    justify-content: space-evenly;
+    border-collapse: separate;
+    border-spacing: 0 2em;
+    margin-left: 10px;
+}
+.totalTable{
+    border-collapse: separate;
+    border-spacing: 0 1em;
+    width: 100%;
+    margin-left: 20px;
+    font-size: large;
+    font-weight: 700;
+    margin-left: 10px;
+    text-align: left;
+}
+.horizontalLine{
+    border-width: 1px;
+    border-style: solid;
+}
+.saveOrder{
+    margin-left: auto;
+    position: relative;
+    text-align: center;
+}
+.priceDetails{
+    margin-left: 20px;
+    font-size: larger;
+    font-weight: 700;
+    text-align: center;
 }
