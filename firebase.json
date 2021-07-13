@@ -1,0 +1,16 @@
+{
+  "hosting": {
+    "public": "YELLOW RIDDLE ASSIGNMENT",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ]
+  }
+}
