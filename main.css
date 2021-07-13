@@ -1,12 +1,33 @@
 .inner_box{
     border: 2px;
     border-style: solid;
-    width: 70%;
+    width: 90%;
+    display: flex;
+    flex-direction: row;
 }
 .outer_box{
     border:2px;
     border-style: solid;
-    width: 60%;
+    width: 70%;
+}
+.imageBox{
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+}
+.productAddBox{
+    border: 1px;
+    font-size: large;
+    border-style: solid;
+    border-radius: 3px;
+    width: 30px;
+    justify-content: center;
+    margin-left: 1px;
+}
+.buttonsContainer{
+    display: inline-flex;
+    
+    
 }
 .price_box{
     position: relative;
@@ -14,4 +35,55 @@
     border:2px;
     border-style: solid;
     width: 10%;
+}
+.productImg{
+    width: 80px;
+    cursor: pointer;
+}
+.productAddButton{
+    height: 20px;
+    margin-top: 20px;
+}
+.productName{
+    font-size: large;
+    font-weight: 600;
+    position: relative;
+}
+.sellerName{
+    font-size: medium;
+    font-weight: 500;
+    opacity: 60%;
+}
+.price{
+   font-size: large;
+   font-weight: 600; 
+}
+.removeButton{
+    width: 80px;
+    margin-top: 16%;
+    margin-left: 20px;
+    border-color: transparent;
+    background-color: transparent;
+    font-weight: 700;
+    font-size: medium;
+    cursor: pointer;
+}
+.delivery{
+    margin-top: 20px;
+    margin-left: 20%;
+    opacity: 50%;
+
+}
+.placeOrder{
+    height: 40px;
+    width: 20%;
+    margin-left: 70%;
+    border-color: transparent;
+    margin-top: 10px;
+    cursor: pointer;
+    color: white;
+    background-color: rgb(224, 95, 48);
+}
+.productBox{
+    
 }
