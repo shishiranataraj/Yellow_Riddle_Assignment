@@ -5,38 +5,25 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Yellow Riddle Assignment - Shishira N</title>
+    <script src="./products.js"></script>
 </head>
+
 <body>
 <div class="main_box">
     <div class="outer_box">
-         <p class="priceDetails">My Cart(2)</p>
-            <div class="inner_box">
-                <div class="imageBox">
-                    <img class="productImg" src="https://rukminim1.flixcart.com/image/224/224/jnj7iq80/mobile/y/q/d/apple-iphone-xr-mry52hn-a-original-imafa6zkfgwpnsgz.jpeg?q=90" alt="iphone xr" />
-                    <div class="buttonsContainer">
-                        <button class="productAddButton" type="button">-</button>
-                        <p class="productAddBox">1</p>
-                        <button class="productAddButton" type="button">+</button>
-                    </div>
-                </div>
-                <div class="productBox">
-                    <p class="productName">Apple iPhone XR(White 128GB)(Includes earpods...)</p>
-                    <p class="sellerName">Seller name seller name</p>
-                    <p class="price">Price</p>
-                    <button class="removeButton" type="button">REMOVE</button>
-                </div>
-                <p class="delivery">Delivery by xx/yy. <br><br> 7 day replacement policy</p>
-            </div>
-            <button class="placeOrder" type="button">PLACE ORDER</button>
+         <p class="priceDetails" id="cartItems">My Items</p>
+            <div id="products"></div>
+            
+            <button class="placeOrder" type="button" onclick="getNumberOfItems()">PLACE ORDER</button>
     </div>
     <div class="price_box">
         <p class="priceDetails">Price Details</p>
         <hr>
         <table class="priceTable">
             <tr class="tableRow">
-                <td class="tableHead">Price (2 items)</td>
-                <td class="tableData">10000</td>
+                <td class="tableHead" id="noOfItems"> Price</td>
+                <td class="tableData" id="fullPrice"></td>
             </tr>
             <tr class="tableRow">
                 <td class="tableHead">Discount</td>
@@ -51,7 +38,7 @@
         <table class="totalTable">         
             <tr class="tableRow">
                 <td class="tableHead">Total Amount</td>
-                <td class="tableData">10000</td>
+                <td class="tableData" id="totalPrice"></td>
             </tr>
         </table>
         <div class="horizontalLine"></div>
