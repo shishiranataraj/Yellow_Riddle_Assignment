@@ -69,8 +69,7 @@ window.onload = () => {
         }
          
          total= getTotal(prod.finalPrice);
-         totalDiscount +=  prod.originalPrice- prod.finalPrice;
-     
+         totalDiscount +=  Math.max((prod.originalPrice- prod.finalPrice),0);
          
       })
       document.getElementById('totalDiscount').innerHTML = "₹" + totalDiscount;
@@ -122,10 +121,10 @@ totalDiscount = totalDiscount + discount;
 console.log("new discount added " + totalDiscount)
 console.log(productPrice);
  net = total + sum;
-document.getElementById("fullPrice").innerHTML ="₹"+ net;
-document.getElementById('totalPrice').innerHTML ="₹" +net;
-document.getElementById('totalSavings').innerHTML = " You will save ₹" + totalDiscount + " on this order";
-document.getElementById('totalDiscount').innerHTML = "₹" + totalDiscount;
+document.getElementById("fullPrice").innerHTML ="₹"+ Math.max(net,0);
+document.getElementById('totalPrice').innerHTML ="₹" +Math.max(net,0);
+document.getElementById('totalSavings').innerHTML = " You will save ₹" + Math.max(totalDiscount,0) + " on this order";
+document.getElementById('totalDiscount').innerHTML = "₹" + Math.max(totalDiscount,0);
 }
 
 function delProduct(productPrice,originalPrice){
@@ -136,10 +135,10 @@ totalDiscount = totalDiscount - discount;
 console.log("new discount sub " + totalDiscount)
 console.log("deleted" + sum);
 net = total + sum;
-document.getElementById('totalPrice').innerHTML ="₹" +net ;
-document.getElementById('totalSavings').innerHTML = " You will save ₹" + totalDiscount + " on this order";
-document.getElementById("fullPrice").innerHTML = "₹" +net;
-document.getElementById('totalDiscount').innerHTML = "₹" + totalDiscount;
+document.getElementById('totalPrice').innerHTML ="₹" +Math.max(net,0) ;
+document.getElementById('totalSavings').innerHTML = " You will save ₹" + Math.max(totalDiscount,0) + " on this order";
+document.getElementById("fullPrice").innerHTML = "₹" + Math.max(net,0);
+document.getElementById('totalDiscount').innerHTML = "₹" +  Math.max(totalDiscount,0);
 }
 
 function removeItem(prodPrice){
@@ -230,10 +229,10 @@ function renderFunction(){
          document.getElementById('totalPrice').innerHTML = "₹" + total;
          document.getElementById('fullPrice').innerHTML = "₹ " + total;
       })
-      document.getElementById('totalDiscount').innerHTML = "₹" + totalDiscount;
+      document.getElementById('totalDiscount').innerHTML = "₹" +  Math.max(totalDiscount,0);
       document.getElementById('products').innerHTML = content;
       document.getElementById('prodCount').innerHTML = 1;
-      document.getElementById('totalSavings').innerHTML = " You will save ₹" + totalDiscount + " on this order";
+      document.getElementById('totalSavings').innerHTML = " You will save ₹" + Math.max(totalDiscount,0) + " on this order";
     });
 }
  
